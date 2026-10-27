@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #030712;
+  }
+  
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+.font-serif-title {
+  font-family: 'Cinzel', serif;
+}
+
+/* Custom glowing effects */
+.glow-cyan {
+  box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.35);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.35);
+}
+
+.glow-purple {
+  box-shadow: 0 0 25px -5px rgba(168, 85, 247, 0.35);
+}
+
+/* Certificate card luxury border and watermark */
+.certificate-frame {
+  background: radial-gradient(circle at 50% 0%, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98));
+  border: 2px solid rgba(217, 119, 6, 0.3);
+  position: relative;
+}
+
+.certificate-frame::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px dashed rgba(245, 158, 11, 0.35);
+  pointer-events: none;
+}
+
+/* Background animated blockchain grid */
+.cyber-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
